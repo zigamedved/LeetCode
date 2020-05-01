@@ -8,12 +8,10 @@
 
 long reverse(long n){
     long result=0;
-    
     while(n>0){
         result=result*10+n%10;
         n/=10;
     }
-    
     return result;
 }
 
@@ -21,10 +19,8 @@ long reverse(long n){
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
     long sum1=0;
     long sum2=0;
-    
     int count1=1;
     int count2=1;
-    
     
     //vodilne nicle
     struct ListNode* nicle1=l1;
@@ -58,9 +54,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
     
     sum1+=sum2;
     //sum1=reverse(sum1);
-    
     //printf("%d\n",sum1);
-    
     struct ListNode* result = NULL;
     result = (struct ListNode*)malloc(sizeof(struct ListNode));
     struct ListNode* pointer=result;
