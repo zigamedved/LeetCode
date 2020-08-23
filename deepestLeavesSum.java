@@ -16,10 +16,9 @@
 class Solution {
     int max=0;
     int sum=0;
-        
+    
     public int deepestLeavesSum(TreeNode root) {
-		int target=deep(root,0);
-        System.out.println(max);
+	int target=deep(root,0);
         count(root,1);
         return sum;
     }
@@ -29,13 +28,10 @@ class Solution {
               max=height;
         }
         if(root==null)return max;
-        
         int sum1=deep(root.left,height+1);
         int sum2=deep(root.right,height+1);
-        
         if(sum1>=sum2)return sum1;
         return sum2;
-            
     }
     
     private void count(TreeNode root,int current){
